@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Food Menu HWa6</string>
+    <string name="title_item_detail">Food Detail</string>
+    <string name="add">Add</string>
+    <string name="update">Update</string>
+    <string name="delete">Delete</string>
+</resources>

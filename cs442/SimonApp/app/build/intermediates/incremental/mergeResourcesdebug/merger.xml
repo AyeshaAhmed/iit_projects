@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="23.1.0"><source path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\res"/></dataSet><dataSet config="main"><source path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res"><file name="ic_launcher" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi" type="drawable"/><file name="ic_launcher" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\drawable-ldpi\ic_launcher.png" qualifiers="ldpi" type="drawable"/><file name="ic_launcher" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi" type="drawable"/><file name="ic_launcher" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi" type="drawable"/><file name="activity_simon_app_main" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\layout\activity_simon_app_main.xml" qualifiers="" type="layout"/><file name="activity_simon_app_main" path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\menu\activity_simon_app_main.xml" qualifiers="" type="menu"/><file path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="HelloWorldDisplay">18pt</dimen></file><file path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\values\strings.xml" qualifiers=""><string name="link_text_auto"><b>text1: Various kinds
+      of data that will be auto-linked.</b>  
+      1)Click on http://www.google.com to launch the
+      web browser. 2)Click on google.com too. 3)Click on 
+      (415) 555-1212 to dial the phone. 4)Click
+      foobar@example.com to launch email app. 5)Click
+      http://www.example.com/lala/foobar@example.com to launch browser, 
+      not the e-mail app.  6)Click a location
+      like 1600 Amphitheatre Parkway, Mountain View, CA 94043
+
+    </string><string name="app_name">SimonApp</string><string name="hello_world">Hello world!</string><string name="link_text_manual"><b>text2: Explicit links using &lt;a> markup.</b>
+      This has markup for a <a href="http://www.google.com">link</a> specified
+      via an &lt;a> tag.  Use a \"tel:\" URL
+      to <a href="tel:4155551212">dial a phone number</a>.
+    </string><string name="menu_settings">Settings</string></file><file path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\values\styles.xml" qualifiers=""><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style><color name="mycolor">#234565</color><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style></file><file path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\build\generated\res\rs\debug"/><source path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug"><source path="C:\Users\Ayesha Ahmed\Downloads\SimonApp\app\src\debug\res"/></dataSet><mergedItems/></merger>

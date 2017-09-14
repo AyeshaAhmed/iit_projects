@@ -1,0 +1,39 @@
+Grade: 8.00/15.00
+
+1 Deduction(s):
+
+--------------
+#1: 7.00 points
+Failing test: test_error: 
+        Test that errors match.
+        @points=7
+        
+Traceback (most recent call last):
+  File "assignments-sol/bonus/bonus_test.py", line 42, in test_error
+    self.assertTrue(False, msg='took more than 100 seconds to run')
+AssertionError: False is not true : took more than 100 seconds to run
+
+source:
+    def test_error(self):
+         """
+         Test that errors match.
+         @points=7
+         """
+         profiles = read_profiles('profiles.txt.gz')
+         signal.signal(signal.SIGALRM, handler)
+         signal.alarm(300)
+         toolong = False
+         try:
+             profiles = prune_terms(profiles, min_df=2)
+             km = KMeans(k=10)
+             km.cluster(profiles, iters=5)
+             error = km.error(profiles)
+             self.assertAlmostEqual(error, 31108.1, 1)
+         except:
+             print('time is up...')
+             toolong = True
+         if toolong:
+             self.assertTrue(False, msg='took more than 100 seconds to run')
+         signal.alarm(0)
+--------------
+

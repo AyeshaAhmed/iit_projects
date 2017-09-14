@@ -1,0 +1,74 @@
+***HuffSall Encoding Program***
+Please enter a sentence to encode and press enter:
+This sentence contains three a's, three c's, two d's, twenty-six e's, five f's, three g's, eight h's, thirteen i's, two l's, sixteen n's, nine o's, six r's, twenty-seven s's, twenty-two t's, two u's, five v's, eight w's, four x's, five y's, and only one z.
+Total Characters: 256
+Total Letters: 170
+Unique Letters: 20
+
+SYMBOL	FREQ.	DEPTH	TOTAL	HUFFMAN CODE
+'x'	4	5	20	00000
+'l'	2	6	12	000010
+'u'	2	6	12	000011
+'h'	8	4	32	0001
+'n'	16	3	48	001
+'w'	8	4	32	0100
+'o'	9	4	36	0101
+'v'	5	5	25	01100
+'f'	5	5	25	01101
+'y'	5	5	25	01110
+'g'	3	6	18	011110
+'a'	3	6	18	011111
+'t'	22	3	66	100
+'c'	3	6	18	101000
+'z'	1	7	7	1010010
+'d'	2	7	14	1010011
+'r'	6	5	30	10101
+'i'	13	4	52	1011
+'e'	26	3	78	110
+'s'	27	3	81	111
+
+***** TREE *****
+
+|	|	|-------'s':27
+|	|-------53
+|	|	|-------'e':26
+|-------100
+|	|	|	|-------'i':13
+|	|	|-------25
+|	|	|	|	|-------'r':6
+|	|	|	|-------12
+|	|	|	|	|	|	|-------'d':2
+|	|	|	|	|	|-------3
+|	|	|	|	|	|	|-------'z':1
+|	|	|	|	|-------6
+|	|	|	|	|	|-------'c':3
+|	|-------47
+|	|	|-------'t':22
+170
+|	|	|	|	|	|-------'a':3
+|	|	|	|	|-------6
+|	|	|	|	|	|-------'g':3
+|	|	|	|-------11
+|	|	|	|	|-------'y':5
+|	|	|-------21
+|	|	|	|	|-------'f':5
+|	|	|	|-------10
+|	|	|	|	|-------'v':5
+|	|-------38
+|	|	|	|-------'o':9
+|	|	|-------17
+|	|	|	|-------'w':8
+|-------70
+|	|	|-------'n':16
+|	|-------32
+|	|	|	|-------'h':8
+|	|	|-------16
+|	|	|	|	|	|-------'u':2
+|	|	|	|	|-------4
+|	|	|	|	|	|-------'l':2
+|	|	|	|-------8
+|	|	|	|	|-------'x':4
+
+***** TREE STRUCT *****
+
+tree(root(170),tree(root(70),tree(root(32),tree(root(16),tree(root(8),leaf('x':4),tree(root(4),leaf('l':2),leaf('u':2))),leaf('h':8)),leaf('n':16)),tree(root(38),tree(root(17),leaf('w':8),leaf('o':9)),tree(root(21),tree(root(10),leaf('v':5),leaf('f':5)),tree(root(11),leaf('y':5),tree(root(6),leaf('g':3),leaf('a':3)))))),tree(root(100),tree(root(47),leaf('t':22),tree(root(25),tree(root(12),tree(root(6),leaf('c':3),tree(root(3),leaf('z':1),leaf('d':2))),leaf('r':6)),leaf('i':13))),tree(root(53),leaf('e':26),leaf('s':27))))

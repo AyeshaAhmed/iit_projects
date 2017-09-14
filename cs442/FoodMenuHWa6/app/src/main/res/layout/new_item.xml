@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main">
+    <RelativeLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <TextView
+            android:id="@+id/detail_head"
+            android:text="Add Item"
+            android:layout_centerHorizontal="true"
+            android:textSize="15pt"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/add_name"
+            android:text="NAME: "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/detail_head"
+            android:layout_marginTop="20dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_name_edit"
+            android:layout_below="@id/detail_head"
+            android:layout_toRightOf="@id/add_name"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/add_price" />
+
+
+        <TextView
+            android:id="@+id/add_price_head"
+            android:text="PRICE: "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/add_name"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_price"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/add_price_head"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/add_recipie_head" />
+
+        <TextView
+            android:id="@+id/add_desc_head"
+            android:text="Description: "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/add_price_head"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_desc"
+            android:layout_below="@id/add_desc_head"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/add_ingre_head"
+            android:text="Ingredients : "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/add_desc"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_ingre"
+            android:layout_below="@id/add_ingre_head"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/add_recipie_head"
+            android:text="Recipie: "
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/add_ingre"
+            android:layout_marginTop="15dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/add_recipie"
+            android:layout_below="@id/add_recipie_head"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</ScrollView>

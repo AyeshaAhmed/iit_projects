@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=args
+comment0.target=void\ main(java.lang.String[])
+comment1.params=x\ y\ z
+comment1.target=boolean\ isPythag(int,\ int,\ int)
+comment2.params=x
+comment2.target=double\ beDouble(int)
+numComments=3

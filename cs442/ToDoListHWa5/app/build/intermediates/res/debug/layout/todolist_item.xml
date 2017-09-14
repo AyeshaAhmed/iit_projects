@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+  <TextView
+    android:id="@+id/rowDate"
+    android:background="@color/notepad_paper"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical"
+    android:textColor="#F0f0"
+    android:layout_alignParentRight="true"
+  />
+    <com.paad.todolist.ToDoListItemView
+        android:id="@+id/row"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:textColor="@color/notepad_text"
+        android:layout_toLeftOf="@+id/rowDate"
+        />
+    <com.paad.todolist.ToDoListItemView
+        android:id="@+id/rowNum"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="1dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:textColor="@color/notepad_text"
+        android:layout_toLeftOf="@+id/row"
+        />
+</RelativeLayout><!-- From: file:/C:/h/p/CS442/06_Fall15/workspace/Chapter_4_To-do_List_Part_4/app/src/main/res/layout/todolist_item.xml -->

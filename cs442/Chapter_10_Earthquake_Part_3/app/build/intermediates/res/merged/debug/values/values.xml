@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/AndroidStudioProjects/Chapter_10_Earthquake_Part_3/app/src/main/res/values/arrays.xml -->
+    <eat-comment/>
+    <string-array name="magnitude">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+  </string-array>
+    <string-array name="magnitude_options">
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+    <item>4</item>
+    <item>5</item>
+    <item>6</item>
+    <item>7</item>
+    <item>8</item>
+  </string-array>
+    <string-array name="update_freq_options">
+    <item>Every Minute</item>
+    <item>5 minutes</item>
+    <item>10 minutes</item>
+    <item>15 minutes</item>
+    <item>Every Hour</item>
+  </string-array>
+    <string-array name="update_freq_values">
+    <item>1</item>
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+    <item>60</item>
+  </string-array>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/AndroidStudioProjects/Chapter_10_Earthquake_Part_3/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Earthquake</string>
+    <string name="auto_update_prompt">Auto Update?</string>
+    <string name="menu_preferences">Preferences</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_update">Refresh Earthquakes</string>
+    <string name="min_quake_mag_prompt">Minimum Quake Magnitude</string>
+    <string name="quake_feed">
+    http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.atom
+  </string>
+    <string name="search_description">Search earthquake locations</string>
+    <string name="update_freq_prompt">Update Frequency</string>
+</resources>

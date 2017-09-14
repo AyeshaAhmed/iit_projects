@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="10dp"
+    android:background="@mipmap/bg_img1">
+
+    <Button android:id="@+id/save" style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignParentRight="true" android:layout_below="@+id/item_name"
+        android:layout_marginRight="21dp" android:layout_marginTop="13dp"
+        android:text="@string/action_Add" />
+
+    <Button android:id="@+id/delete" style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/save" android:layout_alignBottom="@+id/save"
+        android:layout_toLeftOf="@+id/save" android:text="@string/action_Delete" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/delete"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="false">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView android:id="@+id/textView1" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true" android:text="@string/fooditem_title"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textStyle="bold"
+                android:layout_column="0"
+                android:layout_span="2"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fooditem_name"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0"/>
+            <EditText
+                android:id="@+id/item_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="15"
+                android:layout_column="1" >
+
+
+                <requestFocus />
+            </EditText>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fooditem_price"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0" />
+            <EditText
+                android:id="@+id/item_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:paddingLeft="10dp"
+                android:layout_column="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fooditem_details"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0" />
+            <EditText
+                android:id="@+id/item_details"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_column="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fooditem_method"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0" />
+            <EditText
+                android:id="@+id/item_method"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:paddingLeft="10dp"
+                android:layout_column="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fooditem_ingredients"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0" />
+            <EditText
+                android:id="@+id/item_ingredients"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="3"
+                android:paddingLeft="10dp"
+                android:layout_column="1" />
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

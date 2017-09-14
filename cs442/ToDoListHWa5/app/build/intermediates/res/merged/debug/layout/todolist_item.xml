@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <aahmed31_a5.cs442.com.ToDoListItemView
+        android:id="@+id/rowNum"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:textColor="@color/notepad_text"
+        android:layout_toLeftOf="@+id/row"
+        />
+
+    <aahmed31_a5.cs442.com.ToDoListItemView
+        android:id="@+id/row"
+        android:background="@color/notepad_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="10"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:textColor="@color/notepad_text"
+        android:layout_toLeftOf="@+id/rowDate"
+        />
+
+    <aahmed31_a5.cs442.com.ToDoListItemView
+        android:id="@+id/rowDate"
+        android:background="@color/notepad_paper"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"
+        android:scrollbars="vertical"
+        android:fadingEdge="vertical"
+        android:textColor="@color/notepad_text"
+        android:layout_alignParentRight="true"
+        />
+</LinearLayout><!-- From: file:/C:/Users/Ayesha%20Ahmed/AndroidStudioProjects/ToDoListHWa5/app/src/main/res/layout/todolist_item.xml -->

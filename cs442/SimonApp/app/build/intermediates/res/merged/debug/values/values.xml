@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/Downloads/SimonApp/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <color name="mycolor">#234565</color>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/Downloads/SimonApp/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="HelloWorldDisplay">18pt</dimen>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/Downloads/SimonApp/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">SimonApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="link_text_auto"><b>text1: Various kinds
+      of data that will be auto-linked.</b>  
+      1)Click on http://www.google.com to launch the
+      web browser. 2)Click on google.com too. 3)Click on 
+      (415) 555-1212 to dial the phone. 4)Click
+      foobar@example.com to launch email app. 5)Click
+      http://www.example.com/lala/foobar@example.com to launch browser, 
+      not the e-mail app.  6)Click a location
+      like 1600 Amphitheatre Parkway, Mountain View, CA 94043
+
+    </string>
+    <string name="link_text_manual"><b>text2: Explicit links using &lt;a> markup.</b>
+      This has markup for a <a href="http://www.google.com">link</a> specified
+      via an &lt;a> tag.  Use a \"tel:\" URL
+      to <a href="tel:4155551212">dial a phone number</a>.
+    </string>
+    <string name="menu_settings">Settings</string>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/Downloads/SimonApp/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

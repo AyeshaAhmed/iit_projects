@@ -1,0 +1,148 @@
+CS 350 Lab 7, Spring 2015 (Runtime Stack trace)
+
+============================== Problem 1 ==============================
+
+At location 1:
+
+For f:
+	Location 9: r = 0
+	DL = Location 8
+	RA = Location 2
+	RV = 1
+	n = 1
+For f:
+	Location 8: r = 0
+	DL = Location 7
+	RA = Location 2
+	RV = 0
+	n = 2
+For f:
+	Location 7: r = 0
+	DL = Location 6
+	RA = Location 4
+	RV = 0
+	n = 3
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At location 3:
+
+For f:
+	Location 8: r = 1
+	DL = Location 7
+	RA = Location 2
+	RV = 2
+	n = 2
+For f:
+	Location 7: r = 0
+	DL = Location 6
+	RA = Location 4
+	RV = 0
+	n = 3
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At location 3:
+
+For f:
+	Location 7: r = 2
+	DL = Location 6
+	RA = Location 4
+	RV = 6
+	n = 3
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At location 5:
+
+For main:
+	Location 6: m = 6;
+	DL = null
+	RA to OS
+	RV = 0
+
+============================== Problem 2 ==============================
+[Note: this is the non-tail-recursive solution]
+
+At Location 1:
+
+For g:
+	Location 9: DL = Location 8
+	RA = Location 2
+	RV = 6
+	n = 1
+	r = 6
+For g:
+	Location 8: DL = Location 7
+	RA = Location 2
+	RV = 0
+	n = 2
+	r = 3
+For g:
+	Location 7: DL = Location 6
+	RA = Location 4
+	RV = 0
+	n = 3
+	r = 1
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At Location 3:
+
+For g:
+	Location 8: DL = Location 7
+	RA = Location 2
+	RV = 6
+	n = 2
+	r = 3
+For g:
+	Location 7: DL = Location 6
+	RA = Location 4
+	RV = 0
+	n = 3
+	r = 1
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At Location 3:
+
+For g:
+	Location 7: DL = Location 6
+	RA = Location 4
+	RV = 6
+	n = 3
+	r = 1
+For main:
+	Location 6: m = 0;
+	DL = null
+	RA to OS
+	RV = 0
+
+--------------------
+At Location 5:
+
+For main:
+	Location 6: m = 6;
+	DL = null
+	RA to OS
+	RV = 0

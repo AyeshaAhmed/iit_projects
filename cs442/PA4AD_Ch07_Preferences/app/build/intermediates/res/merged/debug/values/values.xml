@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/AndroidStudioProjects/PA4AD_Ch07_Preferences/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">APA4AD_Ch07_Preferences</string>
+    <string name="hello">Hello World, MyActivity!</string>
+</resources>

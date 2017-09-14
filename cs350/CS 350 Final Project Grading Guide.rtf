@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 6.3.9600}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 CS 350 - FINAL PROJECT GRADING GUIDE  version 2015-05-01\par
+------------------------------------\par
+Fill in the info below; include the edited file in your zip submission.\par
+[Don't submit a paper copy.]  Don't submit this file separately [but for\par
+those of you who don't follow directions, this file is as much a part of\par
+your project as the code].\par
+\par
+[updated 5/01: Added g command, added some XC cases, reformatted some lines]\par
+\par
+-------------------- STYLE & STRUCTURE --------------------\par
+\par
+For the SYNTAX and STYLE categories below, >replace< each leading dot with\par
+y or n (or ? if you're not sure)\par
+\par
+SYNTAX\par
+y\tab Program compiles without error (gcc -Wall -std=c99 -lm on alpha.cs.iit.edu)\par
+\tab Note: projects that don't compile because of errors will be worth very little.\par
+y\tab Program compiles without warnings\par
+y\tab Program compiles with warnings, but the warnings don't describe bugs\par
+\par
+STYLE\par
+y\tab Each code file includes a comment with your name\par
+y\tab Block comments delineate sections of code: declarations, prototypes,\par
+\tab utilities (possibly?) .....\par
+y\tab No global variables\par
+y\tab Routines appear in some reasonable order\par
+y\tab Routine names indicate what they do\par
+y\tab Complex routines include block comments\par
+y\tab Variable names indicate what values they hold or properties they indicate\par
+\par
+CODE STRUCTURE\par
+y\tab No huge routines (over, say 75 lines)\par
+y\tab Main program nice and compact\par
+y\tab Code for different commands goes in different routines\par
+y\tab Code for different instructions goes in different routines\par
+y\tab Repeatedly executed code is factored out into its own routine\par
+\tab (e.g., code to extract 6-bit PC offset and convert it to a number)\par
+\par
+-------------------- FUNCTIONALITY --------------------\par
+\par
+For the categories below, >replace< the leading dot on each line with\par
+\tab u\tab If the code is unwritten\par
+\tab ?\tab If the code is written but untested\par
+\tab b\tab If the code is buggy\par
+\tab y\tab If you've tested your code and think it's not buggy\par
+\par
+[added 5/01]: If your code is buggy, add a line with a description of the bug\par
+\par
+CPU & Memory\par
+y\tab Word is short int, Address is unsigned short int\par
+y\tab Has pc, ir, cc, running flag, registers, memory\par
+y\tab No extraneous info\par
+\par
+CPU Initialization\par
+y\tab Initializes CPU fields\par
+y\tab Dumps CPU after initialization\par
+\par
+Memory Initialization\par
+y\tab Gets name of hex file, open it (complain on error)\par
+y\tab Reads origin\par
+y\tab Allows origin to be x8000 - xffff\par
+y\tab Reads hex numbers into successive memory locations\par
+y\tab Next address after xffff is x0000\par
+y\tab Treats values x8000 - xffff as being negative\par
+y\tab Ignores rest of line after origin or data value\par
+y\tab Handles end of file\par
+y\tab Dumps memory after initialization\par
+y\tab XC: Detects bad data\par
+y\tab XC [you fill in:] _____dumps stuff in order like instructor's sample\par
+\par
+Dump CPU\par
+y\tab Prints pc, ir, cc, running flag, registers\par
+y\tab Output well-formatted (e.g., prints x8000 not xffff80000)\par
+y\tab XC: Extra fancy formatting [you fill in:] _____prints addresses with capital letters properly\par
+\par
+Dump Memory\par
+y\tab Prints locations/values with nonzero values\par
+y\tab Doesn't print locations/values with value = zero\par
+y\tab Handles memory addresses x8000 - xffff\par
+\par
+Command loop\par
+y\tab Prompts/reads first command [doesn't ignore it, e.g.]\par
+y\tab Prompts/reads later commands\par
+y\tab XC: No infinite loop on EOF\par
+y\tab XC: Commands are case-insensitive [added 5/01] -- it reads both cases --\par
+y\tab XC: Allows extra whitespace before / in command [added 5/01]\par
+\par
+Basic commands\par
+y\tab Recognizes h and ?, prints useful message\par
+y\tab Recognizes d, dumps CPU and memory\par
+y\tab Recognizes q, quits\par
+\par
+Set register command\par
+y\tab Recognizes s Rn xValue [x followed by 4 hex digits]\par
+y\tab Complains if not register r0 - r7\par
+y\tab Sets register n to value\par
+y\tab Treats values x8000 - xffff as being negative\par
+y\tab XC\tab Allows value to be x followed by < 4 digits (e.g., s r0 x20)\par
+u\tab XC\tab Allows value to be in decimal (e.g., s r0 32)\par
+\par
+Set memory command\par
+y\tab Recognizes s addr xValue\par
+y\tab Sets memory[addr] <- value\par
+y\tab Handles memory addresses x8000 - xffff\par
+y\tab Handles values x8000 - xffff\par
+y\tab XC\tab Allows value to be x followed by < 4 digits\par
+u\tab XC\tab Allows value to be in decimal\par
+u\tab XC\tab Allows address to be in decimal\par
+\par
+Goto command [added 5/01]\par
+y\tab Recognizes g addr\par
+y\tab Sets pc to addr\par
+y\tab Handles memory addresses x8000 - xffff\par
+u\tab XC\tab Allows address to be in decimal\par
+\par
+Execution commands\par
+y\tab Recognizes command <cr> ...\par
+y\tab -- and runs instruction cycle exactly once ...\par
+y\tab (Unless CPU running flag is off)\par
+y\tab Recognizes command <nbr> ...\par
+y\tab -- and complains if number < 1 ...\par
+y\tab -- and protests if number too large (sets it to something reasonable)...\par
+y\tab -- and runs instruction cycle nbr times ...\par
+y\tab -- but stops early if CPU running flag turns off ...\par
+\par
+Instruction cycle [reformatted 5/01]\par
+y\tab Sets ir <- memory[pc], increments pc, echoes ir in hex\par
+y\tab Decodes opcode, calls code for that operation\par
+y\tab Prints address of current instruction\par
+y\tab Prints mnemonic for opcode ("LD", "ST", etc).\par
+\par
+Effective Address Calculation\par
+y\tab Detects 9-bit PC offset for LD, LDI, LEA, ST, STI, BR\par
+y\tab Detects 11-bit PC offset for JSR\par
+y\tab Detects 6-bit base register offset for LDR, STR\par
+y\tab Treats offsets as signed numbers\par
+y\tab Calculates address = PC + offset for LD, LDI, LEA, ST, STI, BR, JSR\par
+y\tab Calculates address = Base register + offset for LDR, STR\par
+y\tab Calculates address = memory[PC + offset] for LDI, STI\par
+y\tab Treats result address x8000 - xffff correctly\par
+y\tab Wraps address arithmetic around xffff (xffff+1 = x0000, x0000-1 = xffff)\par
+\par
+MOVEMENT INSTRUCTIONS [did some reformatting below, 5/01]\par
+\par
+LD Rn,offset\par
+y\tab Prints Rn, offset, calculates/prints PC, addr, new value\par
+y\tab Sets reg[n] = new value = memory[addr], sets condition code\par
+\par
+ST Rn, offset\par
+y\tab Prints Rn, offset, calculates/prints PC, addr, new value\par
+y\tab Sets memory[addr] = new value = reg[n]\par
+\par
+LEA Rn,offset\par
+y\tab Prints Rn, offset, calculates/prints PC, addr\par
+y\tab Sets reg[n] = addr, sets condition code\par
+\par
+LDR Rn, Base, offset\par
+y\tab Prints Rn, Base, offset, calculates/prints reg[Base], addr, new value\par
+y\tab Sets reg[n] = memory[addr], sets condition code\par
+\par
+STR Rn, Base, offset\par
+y\tab Prints Rn, Base, offset, calculates/prints reg[Base], addr, new value\par
+y\tab Sets memory[addr] = reg[n]\par
+\par
+LDI Rn, offset\par
+y\tab Prints Rn, offset, calculates/prints PC, memory[PC+offset], addr, new value\par
+y\tab Sets reg[n] = memory[addr], sets condition code\par
+\par
+STI Rn, offset\par
+y\tab Prints Rn, offset, calculates/prints PC, memory[PC+offset], addr, new value\par
+y\tab Sets memory[addr] = reg[n]\par
+\par
+CALCULATION INSTRUCTIONS\par
+\par
+ADD Ra, Rb, Rc\par
+y\tab Detects this case (vs ADD Ra, Rb, immediate)\par
+y\tab Prints Ra, Rb, Rc, calculates/prints reg[b], reg[c], new value = reg[b] + reg[c]\par
+y\tab Sets reg[a] = new value, sets condition code\par
+\par
+ADD Ra, Rb, immediate\par
+y\tab Detects this case (vs ADD Ra, Rb, Rc)\par
+y\tab Prints Ra, Rb, immediate, calculates/prints reg[b], new value = reg[b] + immediate\par
+y\tab Treats immediate as signed integer\par
+y\tab Sets reg[a] = new value, sets condition code\par
+\par
+AND Ra, Rb, Rc\par
+y\tab Detects this case (vs AND Ra, Rb, immediate)\par
+y\tab Prints Ra, Rb, Rc, calculates/prints reg[b], reg[c], new value = reg[b] & reg[c]\par
+y\tab Sets reg[a] = new value, sets condition code\par
+\par
+AND Ra, Rb, immediate\par
+y\tab Detects this case (vs AND Ra, Rb, Rc)\par
+y\tab Prints Ra, Rb, immediate, calculates/prints reg[b], new value = reg[b] & immediate\par
+y\tab Treats immediate as signed integer\par
+y\tab Sets reg[a] = new value, sets condition code\par
+\par
+NOT Ra, Rb\par
+y\tab Prints Ra, Rb, calculates/prints reg[b], new value = ~reg[b]\par
+y\tab Sets reg[a] = new value, sets condition code\par
+\par
+CONTROL INSTRUCTIONS\par
+\par
+BR (0000 NZP offset9)\par
+y\tab Gets NZP field, prints correct mnemonic (NOP, BRP, etc).\par
+y\tab Prints condition code, says whether goto will occur or not\par
+y\tab Calculates/prints PC, offset, addr (if goto needed)\par
+y\tab Sets pc = addr (if goto needed)\par
+\par
+JMP Base\par
+y\tab Prints base, calculates/prints reg[base]\par
+y\tab Sets pc = reg[base]\par
+\par
+JSR offset11\par
+y\tab Detects this case (vs JSRR base), calculates/prints PC, offset, PC+offset\par
+y\tab Sets r7 = pc, sets pc = addr\par
+\par
+JSRR base\par
+y\tab Detects this case (vs JSR offset11)\par
+y\tab Calculates/prints base, reg[base]\par
+y\tab Sets r7 = pc and pc = reg[base]\par
+y\tab Correctly swaps reg[7] and pc if base = 7\par
+\par
+OTHER INSTRUCTIONS\par
+\par
+TRAP vector\par
+y\tab Complains and halts if vector is bad\par
+y\tab Prints mnemonic for vector\par
+y\tab Saves R7 = pc\par
+y\tab OUT (x21): Print char in R0[7:0] (using %c)\par
+y\tab GETC (x20): Asks user to enter char, reads char (possibly <cr>)...\par
+y\tab -- and stores char in R0, print char (in both %c and %d)\par
+y\tab IN (x23): like GETC but use prompt as in LC-3 simulator\par
+y\tab PUTS (x22): Loop through characters & print until \\0\par
+y\tab HALT (x25): Set cc = P\par
+y\tab TRAP not HALT: Set cc using R7\par
+\par
+RTI (Return from Interrupt)\par
+y\tab Print an error message and keep executing\par
+\par
+Unused opcode 13\par
+y\tab Print an error message and keep executing\par
+}
+ 

@@ -1,0 +1,241 @@
+CS 350 - FINAL PROJECT GRADING GUIDE  version 2015-05-01
+------------------------------------
+Fill in the info below; include the edited file in your zip submission.
+[Don't submit a paper copy.]  Don't submit this file separately [but for
+those of you who don't follow directions, this file is as much a part of
+your project as the code].
+
+[updated 5/01: Added g command, added some XC cases, reformatted some lines]
+
+-------------------- STYLE & STRUCTURE --------------------
+
+For the SYNTAX and STYLE categories below, >replace< each leading dot with
+y or n (or ? if you're not sure)
+
+SYNTAX
+y	Program compiles without error (gcc -Wall -std=c99 -lm on alpha.cs.iit.edu)
+	Note: projects that don't compile because of errors will be worth very little.
+y	Program compiles without warnings
+y	Program compiles with warnings, but the warnings don't describe bugs
+
+STYLE
+y	Each code file includes a comment with your name
+y	Block comments delineate sections of code: declarations, prototypes,
+	utilities (possibly?) .....
+y	No global variables
+y	Routines appear in some reasonable order
+y	Routine names indicate what they do
+y	Complex routines include block comments
+y	Variable names indicate what values they hold or properties they indicate
+
+CODE STRUCTURE
+y	No huge routines (over, say 75 lines)
+y	Main program nice and compact
+y	Code for different commands goes in different routines
+y	Code for different instructions goes in different routines
+y	Repeatedly executed code is factored out into its own routine
+	(e.g., code to extract 6-bit PC offset and convert it to a number)
+
+-------------------- FUNCTIONALITY --------------------
+
+For the categories below, >replace< the leading dot on each line with
+	u	If the code is unwritten
+	?	If the code is written but untested
+	b	If the code is buggy
+	y	If you've tested your code and think it's not buggy
+
+[added 5/01]: If your code is buggy, add a line with a description of the bug
+
+CPU & Memory
+y	Word is short int, Address is unsigned short int
+y	Has pc, ir, cc, running flag, registers, memory
+y	No extraneous info
+
+CPU Initialization
+y	Initializes CPU fields
+y	Dumps CPU after initialization
+
+Memory Initialization
+y	Gets name of hex file, open it (complain on error)
+y	Reads origin
+y	Allows origin to be x8000 - xffff
+y	Reads hex numbers into successive memory locations
+y	Next address after xffff is x0000
+y	Treats values x8000 - xffff as being negative
+y	Ignores rest of line after origin or data value
+y	Handles end of file
+y	Dumps memory after initialization
+y	XC: Detects bad data
+y	XC [you fill in:] _____dumps stuff in order like instructor's sample
+
+Dump CPU
+y	Prints pc, ir, cc, running flag, registers
+y	Output well-formatted (e.g., prints x8000 not xffff80000)
+y	XC: Extra fancy formatting [you fill in:] _____prints addresses with capital letters properly
+
+Dump Memory
+y	Prints locations/values with nonzero values
+y	Doesn't print locations/values with value = zero
+y	Handles memory addresses x8000 - xffff
+
+Command loop
+y	Prompts/reads first command [doesn't ignore it, e.g.]
+y	Prompts/reads later commands
+y	XC: No infinite loop on EOF
+y	XC: Commands are case-insensitive [added 5/01] -- it reads both cases --
+y	XC: Allows extra whitespace before / in command [added 5/01]
+
+Basic commands
+y	Recognizes h and ?, prints useful message
+y	Recognizes d, dumps CPU and memory
+y	Recognizes q, quits
+
+Set register command
+y	Recognizes s Rn xValue [x followed by 4 hex digits]
+y	Complains if not register r0 - r7
+y	Sets register n to value
+y	Treats values x8000 - xffff as being negative
+y	XC	Allows value to be x followed by < 4 digits (e.g., s r0 x20)
+u	XC	Allows value to be in decimal (e.g., s r0 32)
+
+Set memory command
+y	Recognizes s addr xValue
+y	Sets memory[addr] <- value
+y	Handles memory addresses x8000 - xffff
+y	Handles values x8000 - xffff
+y	XC	Allows value to be x followed by < 4 digits
+u	XC	Allows value to be in decimal
+u	XC	Allows address to be in decimal
+
+Goto command [added 5/01]
+y	Recognizes g addr
+y	Sets pc to addr
+y	Handles memory addresses x8000 - xffff
+u	XC	Allows address to be in decimal
+
+Execution commands
+y	Recognizes command <cr> ...
+y	-- and runs instruction cycle exactly once ...
+y	(Unless CPU running flag is off)
+y	Recognizes command <nbr> ...
+y	-- and complains if number < 1 ...
+y	-- and protests if number too large (sets it to something reasonable)...
+y	-- and runs instruction cycle nbr times ...
+y	-- but stops early if CPU running flag turns off ...
+
+Instruction cycle [reformatted 5/01]
+y	Sets ir <- memory[pc], increments pc, echoes ir in hex
+y	Decodes opcode, calls code for that operation
+y	Prints address of current instruction
+y	Prints mnemonic for opcode ("LD", "ST", etc).
+
+Effective Address Calculation
+y	Detects 9-bit PC offset for LD, LDI, LEA, ST, STI, BR
+y	Detects 11-bit PC offset for JSR
+y	Detects 6-bit base register offset for LDR, STR
+y	Treats offsets as signed numbers
+y	Calculates address = PC + offset for LD, LDI, LEA, ST, STI, BR, JSR
+y	Calculates address = Base register + offset for LDR, STR
+y	Calculates address = memory[PC + offset] for LDI, STI
+y	Treats result address x8000 - xffff correctly
+y	Wraps address arithmetic around xffff (xffff+1 = x0000, x0000-1 = xffff)
+
+MOVEMENT INSTRUCTIONS [did some reformatting below, 5/01]
+
+LD Rn,offset
+y	Prints Rn, offset, calculates/prints PC, addr, new value
+y	Sets reg[n] = new value = memory[addr], sets condition code
+
+ST Rn, offset
+y	Prints Rn, offset, calculates/prints PC, addr, new value
+y	Sets memory[addr] = new value = reg[n]
+
+LEA Rn,offset
+y	Prints Rn, offset, calculates/prints PC, addr
+y	Sets reg[n] = addr, sets condition code
+
+LDR Rn, Base, offset
+y	Prints Rn, Base, offset, calculates/prints reg[Base], addr, new value
+y	Sets reg[n] = memory[addr], sets condition code
+
+STR Rn, Base, offset
+y	Prints Rn, Base, offset, calculates/prints reg[Base], addr, new value
+y	Sets memory[addr] = reg[n]
+
+LDI Rn, offset
+y	Prints Rn, offset, calculates/prints PC, memory[PC+offset], addr, new value
+y	Sets reg[n] = memory[addr], sets condition code
+
+STI Rn, offset
+y	Prints Rn, offset, calculates/prints PC, memory[PC+offset], addr, new value
+y	Sets memory[addr] = reg[n]
+
+CALCULATION INSTRUCTIONS
+
+ADD Ra, Rb, Rc
+y	Detects this case (vs ADD Ra, Rb, immediate)
+y	Prints Ra, Rb, Rc, calculates/prints reg[b], reg[c], new value = reg[b] + reg[c]
+y	Sets reg[a] = new value, sets condition code
+
+ADD Ra, Rb, immediate
+y	Detects this case (vs ADD Ra, Rb, Rc)
+y	Prints Ra, Rb, immediate, calculates/prints reg[b], new value = reg[b] + immediate
+y	Treats immediate as signed integer
+y	Sets reg[a] = new value, sets condition code
+
+AND Ra, Rb, Rc
+y	Detects this case (vs AND Ra, Rb, immediate)
+y	Prints Ra, Rb, Rc, calculates/prints reg[b], reg[c], new value = reg[b] & reg[c]
+y	Sets reg[a] = new value, sets condition code
+
+AND Ra, Rb, immediate
+y	Detects this case (vs AND Ra, Rb, Rc)
+y	Prints Ra, Rb, immediate, calculates/prints reg[b], new value = reg[b] & immediate
+y	Treats immediate as signed integer
+y	Sets reg[a] = new value, sets condition code
+
+NOT Ra, Rb
+y	Prints Ra, Rb, calculates/prints reg[b], new value = ~reg[b]
+y	Sets reg[a] = new value, sets condition code
+
+CONTROL INSTRUCTIONS
+
+BR (0000 NZP offset9)
+y	Gets NZP field, prints correct mnemonic (NOP, BRP, etc).
+y	Prints condition code, says whether goto will occur or not
+y	Calculates/prints PC, offset, addr (if goto needed)
+y	Sets pc = addr (if goto needed)
+
+JMP Base
+y	Prints base, calculates/prints reg[base]
+y	Sets pc = reg[base]
+
+JSR offset11
+y	Detects this case (vs JSRR base), calculates/prints PC, offset, PC+offset
+y	Sets r7 = pc, sets pc = addr
+
+JSRR base
+y	Detects this case (vs JSR offset11)
+y	Calculates/prints base, reg[base]
+y	Sets r7 = pc and pc = reg[base]
+y	Correctly swaps reg[7] and pc if base = 7
+
+OTHER INSTRUCTIONS
+
+TRAP vector
+y	Complains and halts if vector is bad
+y	Prints mnemonic for vector
+y	Saves R7 = pc
+y	OUT (x21): Print char in R0[7:0] (using %c)
+y	GETC (x20): Asks user to enter char, reads char (possibly <cr>)...
+y	-- and stores char in R0, print char (in both %c and %d)
+y	IN (x23): like GETC but use prompt as in LC-3 simulator
+y	PUTS (x22): Loop through characters & print until \0
+y	HALT (x25): Set cc = P
+y	TRAP not HALT: Set cc using R7
+
+RTI (Return from Interrupt)
+y	Print an error message and keep executing
+
+Unused opcode 13
+y	Print an error message and keep executing

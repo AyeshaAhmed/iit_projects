@@ -1,0 +1,5 @@
+Jim 20
+Ivan 8
+Susan 16
+Brian 12
+Janet 22

@@ -1,0 +1,74 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView"
+    android:background="@mipmap/bg_img1">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp" android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/FoodItem_title"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textIsSelectable="true"
+        tools:context=".FoodItemDetailFragment" />
+    <TextView
+        android:id="@+id/FoodItem_price"
+        style="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:textIsSelectable="true"
+        tools:context=".FoodItemDetailFragment"
+        android:gravity="right" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Details:"
+        android:layout_gravity="left" />
+    <TextView
+        android:id="@+id/FoodItem_detail"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textIsSelectable="true"
+        tools:context=".FoodItemDetailFragment" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="center"
+        android:id="@+id/imageView" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Method:"
+        android:layout_gravity="left" />
+    <TextView
+        android:id="@+id/FoodItem_method"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textIsSelectable="true"
+        tools:context=".FoodItemDetailFragment" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Ingredients:"
+        android:layout_gravity="left" />
+    <TextView
+        android:id="@+id/FoodItem_ingredients"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:textIsSelectable="true"
+        tools:context=".FoodItemDetailFragment" />
+</LinearLayout>
+</ScrollView>

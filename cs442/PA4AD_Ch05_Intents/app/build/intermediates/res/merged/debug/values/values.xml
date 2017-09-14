@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Ayesha%20Ahmed/AndroidStudioProjects/PA4AD_Ch05_Intents/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="Nuke_From_Orbit">Nuke From Orbit</string>
+    <string name="app_name">CPA4AD_Ch05_Intents</string>
+    <string name="hello">Hello World, CPA4AD_Ch05_IntentsActivity!</string>
+</resources>

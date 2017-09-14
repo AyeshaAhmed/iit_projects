@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SimonApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="link_text_auto"><b>text1: Various kinds
+      of data that will be auto-linked.</b>  
+      1)Click on http://www.google.com to launch the
+      web browser. 2)Click on google.com too. 3)Click on 
+      (415) 555-1212 to dial the phone. 4)Click
+      foobar@example.com to launch email app. 5)Click
+      http://www.example.com/lala/foobar@example.com to launch browser, 
+      not the e-mail app.  6)Click a location
+      like 1600 Amphitheatre Parkway, Mountain View, CA 94043
+
+    </string>
+    <string name="link_text_manual"><b>text2: Explicit links using &lt;a&gt; markup.</b>
+      This has markup for a <a href="http://www.google.com">link</a> specified
+      via an &lt;a&gt; tag.  Use a \"tel:\" URL
+      to <a href="tel:4155551212">dial a phone number</a>.
+    </string>
+ 
+</resources>

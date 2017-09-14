@@ -1,0 +1,10 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name = "colorPrimary">@android:color/holo_blue_light</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/foodbackground</item>
+    </style>
+
+</resources>

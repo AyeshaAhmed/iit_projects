@@ -1,0 +1,33 @@
+;Lab07_CS350_02_Ayesha_Ahmed_Problem2
+;This is a text file for answer to Problem 2 Lab 7
+;This is to show runtime stack for Problem 2
+
+
+;////~~~  Location 1  ~~~////
+
+For g:
+    DL = Location 20
+    RA = Location 4
+    RV = 6
+    n = 1
+    r = 6
+
+For main:
+    Location 20: m = 0
+    DL = null
+    RA to OS
+    RV = 0
+
+;////~~~  Location 3  ~~~////
+; -- not accessed because of tail recursion --
+; ignores Location 3 instruction
+
+
+;////~~~  Location 5  ~~~////
+
+For main:
+    Location 20: m = 6
+    DL = null
+    RA to OS
+    RV = 0
+    

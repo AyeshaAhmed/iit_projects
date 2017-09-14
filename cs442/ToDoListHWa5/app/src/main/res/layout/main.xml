@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <fragment android:name="aahmed31_a5.cs442.com.NewItemFragment"
+    android:id="@+id/NewItemFragment"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+  />
+
+    <fragment android:name="aahmed31_a5.cs442.com.ToDoListFragment"
+    android:id="@+id/TodoListFragment"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+        android:layout_below="@+id/NewItemFragment"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Export"
+        android:id="@+id/exportb"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/importb"
+        android:onClick="ExportButton"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Import"
+        android:id="@+id/importb"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="ImportButton"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetb"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/importb"
+        android:onClick="ResetButton"/>
+
+</RelativeLayout>

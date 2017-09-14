@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=
+comment0.target=TaxProject()
+comment1.params=x\ y
+comment1.target=double\ larger(double,\ double)
+comment2.params=x\ y
+comment2.target=double\ smaller(double,\ double)
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+numComments=4

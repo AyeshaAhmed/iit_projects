@@ -1,0 +1,95 @@
+***Huffman Encoding Program***
+Please enter a sentence to encode and press enter:
+Only the fool would take trouble to verify that his sentence was composed of ten a's, three b's, four c's, four d's, forty-six e's, sixteen f's, four g's, thirteen h's, fifteen i's, two k's, nine l's, four m's, twenty-five n's, twenty-four o's, five p's, sixteen r's, forty-one s's, thirty-seven t's, ten u's, eight v's, eight w's, four x's, eleven y's, twenty-seven commas, twenty-three apostrophes, seven hyphens and, last but not least, a single!
+Total Characters: 449
+Total Evaluated: 377
+Unique Characters: 27
+
+SYMBOL	FREQ.	DEPTH	TOTAL	HUFFMAN CODE
+'t'	37	3	111	000
+'c'	4	6	24	001000
+'p'	5	6	30	001001
+'l'	9	5	45	00101
+'u'	10	5	50	00110
+'a'	10	5	50	00111
+'s'	41	3	123	010
+'e'	46	3	138	011
+'''	23	4	92	1000
+'y'	11	5	55	10010
+'b'	3	7	21	1001100
+'!'	1	8	8	10011010
+'k'	2	8	16	10011011
+'-'	7	6	42	100111
+'o'	24	4	96	1010
+'n'	25	4	100	1011
+','	27	4	108	1100
+'h'	13	5	65	11010
+'i'	15	5	75	11011
+'f'	16	5	80	11100
+'g'	4	7	28	1110100
+'x'	4	7	28	1110101
+'v'	8	6	48	111011
+'r'	16	5	80	11110
+'w'	8	6	48	111110
+'d'	4	7	28	1111110
+'m'	4	7	28	1111111
+
+***** TREE *****
+
+|	|	|	|	|	|	|-------'m':4
+|	|	|	|	|	|-------8
+|	|	|	|	|	|	|-------'d':4
+|	|	|	|	|-------16
+|	|	|	|	|	|-------'w':8
+|	|	|	|-------32
+|	|	|	|	|-------'r':16
+|	|	|-------64
+|	|	|	|	|	|-------'v':8
+|	|	|	|	|-------16
+|	|	|	|	|	|	|-------'x':4
+|	|	|	|	|	|-------8
+|	|	|	|	|	|	|-------'g':4
+|	|	|	|-------32
+|	|	|	|	|-------'f':16
+|	|-------119
+|	|	|	|	|-------'i':15
+|	|	|	|-------28
+|	|	|	|	|-------'h':13
+|	|	|-------55
+|	|	|	|-------',':27
+|-------215
+|	|	|	|-------'n':25
+|	|	|-------49
+|	|	|	|-------'o':24
+|	|-------96
+|	|	|	|	|	|-------'-':7
+|	|	|	|	|-------13
+|	|	|	|	|	|	|	|-------'k':2
+|	|	|	|	|	|	|-------3
+|	|	|	|	|	|	|	|-------'!':1
+|	|	|	|	|	|-------6
+|	|	|	|	|	|	|-------'b':3
+|	|	|	|-------24
+|	|	|	|	|-------'y':11
+|	|	|-------47
+|	|	|	|-------''':23
+377
+|	|	|-------'e':46
+|	|-------87
+|	|	|-------'s':41
+|-------162
+|	|	|	|	|-------'a':10
+|	|	|	|-------20
+|	|	|	|	|-------'u':10
+|	|	|-------38
+|	|	|	|	|-------'l':9
+|	|	|	|-------18
+|	|	|	|	|	|-------'p':5
+|	|	|	|	|-------9
+|	|	|	|	|	|-------'c':4
+|	|-------75
+|	|	|-------'t':37
+
+***** TREE STRUCT *****
+
+tree(root(377),tree(root(162),tree(root(75),leaf('t':37),tree(root(38),tree(root(18),tree(root(9),leaf('c':4),leaf('p':5))),leaf('l':9)),tree(root(20),leaf('u':10),leaf('a':10)))),tree(root(87),leaf('s':41),leaf('e':46))),tree(root(215),tree(root(96),tree(root(47),leaf(''':23),tree(root(24),leaf('y':11),tree(root(13),tree(root(6),leaf('b':3),tree(root(3),leaf('!':1),leaf('k':2))),leaf('-':7)))),tree(root(49),leaf('o':24),leaf('n':25))),tree(root(119),tree(root(55),leaf(',':27),tree(root(28),leaf('h':13),leaf('i':15))),tree(root(64),tree(root(32),leaf('f':16),tree(root(16),tree(root(8),leaf('g':4),leaf('x':4))),leaf('v':8))),tree(root(32),leaf('r':16),tree(root(16),leaf('w':8),tree(root(8),leaf('d':4),leaf('m':4))))))))

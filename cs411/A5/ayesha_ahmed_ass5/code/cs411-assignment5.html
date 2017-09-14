@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>OBJ Viewer</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+
+  <div>
+    <button id="zoomInBtn" type="button" onclick="zoomin()">Zoom in</button>
+    <button id="zoomOutBtn" type="button" onclick="zoomout()">Zoom out</button>
+    <button id="toggleRotBtn" type="button" onclick="toggRot()">Toggle Rotation</button>
+  </div>
+  <div>
+    <form onchange="lightPosChange()">
+      <u><b>Light Position Sliders:</u></b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      X:<input type="range" name="x" id="x" value="-4" min="-10" max="10" step = "1">&emsp;&emsp;&emsp;&emsp;
+      Y:<input type="range" name="y" id="y" value="4" min="-10" max="10" step = "1">&emsp;&emsp;&emsp;&emsp;
+      Z:<input type="range" name="z" id="z" value="9" min="-10" max="10" step = "1">
+    </form>
+  </div>
+  <div>
+    <form onchange="ikParamChange()">
+      <u><b>Light Source Parameters:</u></b>&emsp;&emsp;&emsp;
+      Ambient(Ia):<input type="range" name="iA" id="iA" value="5" min="0" max="10" step = "1">
+      Diffuse(Id):<input type="range" name="iD" id="iD" value="10" min="0" max="10" step = "1">
+      Specular(Is):<input type="range" name="iS" id="iS" value="3" min="0" max="10" step = "1">
+    </form>
+  </div>
+  <div>
+    <form onchange="ikParamChange()">
+      <u><b>Material Propeties:</u></b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+      Ambient(ka):<input type="range" name="ka" id="ka" value="5" min="0" max="10" step = "1">
+      Diffuse(kd):<input type="range" name="kd" id="kd" value="10" min="0" max="10" step = "1">
+      Specular(ks):<input type="range" name="ks" id="ks" value="3" min="0" max="10" step = "1">
+      Shininess(ns):<input type="range" name="ns" id="ns" value="5" min="-10" max="30" step = "1">
+    </form>
+  </div>
+  <div>
+    <form onchange="lightAttenChange()">
+      <u><b>Light Attenuation Coefficients:</u></b>&emsp;
+      Constant(kc):<input type="range" name="kc" id="kc" value="10" min="1" max="10" step = "1">
+      Linear(kl):<input type="range" name="kl" id="kl" value="0" min="0" max="15" step = "1">
+      Quadratic(kq):<input type="range" name="kq" id="kq" value="0" min="0" max="15" step = "1">
+    </form>
+  </div>
+
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/cuon-matrix.js"></script>
+    <script src="lib/cs411-common.js"></script>
+    <script src="lib/obj-loader.js"></script>
+    <script src="cs411-assignment5.js"></script>
+  </body>
+</html>

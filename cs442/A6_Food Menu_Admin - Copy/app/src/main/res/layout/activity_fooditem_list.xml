@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:layout_marginLeft="0dp"
+    android:layout_marginRight="0dp" android:baselineAligned="false"
+    tools:context=".FoodItemListActivity"
+    android:background="#00ddd3">
+    <FrameLayout
+        android:id="@+id/FoodItem_list"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@mipmap/bg_img1" />
+
+</LinearLayout>

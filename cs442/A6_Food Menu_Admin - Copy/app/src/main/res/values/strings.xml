@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Food Menu</string>
+    <string name="title_Food_detail">Food Item Detail</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_Add">Add</string>
+    <string name="action_Delete">Delete</string>
+    <string name="action_Update">Update</string>
+    <string name="fooditem_title">Food Item Details</string>
+    <string name="fooditem_name">Name</string>
+    <string name="fooditem_price">Price</string>
+    <string name="fooditem_details">Details</string>
+    <string name="fooditem_method">Method</string>
+    <string name="fooditem_ingredients">Ingredients</string>
+</resources>

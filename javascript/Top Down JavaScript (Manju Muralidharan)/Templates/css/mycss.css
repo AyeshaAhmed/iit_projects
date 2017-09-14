@@ -1,0 +1,21 @@
+/* Created by Manju Muralidharan for IIT Computer Discovery Camp 2015*/
+body
+{
+background-image:url('images/back.jpg');
+background-repeat:no-repeat;
+background-size:100%;
+background-attachment:fixed;
+}
+
+div
+{
+width:80%;
+margin:auto;
+background-color:#ffffff;
+
+}
+
+#container
+{
+padding: 10px,10px,10px,10px;
+}

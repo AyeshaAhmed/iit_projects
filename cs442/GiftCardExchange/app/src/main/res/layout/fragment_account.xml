@@ -1,0 +1,153 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="gift_card2.IPRO.com.AccountFragment">
+
+    <TextView android:text="Account Info"
+        android:id="@+id/as_title"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:id="@+id/account_info_table"
+        android:layout_below="@+id/as_title"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:background="#7fc5ff">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name:"
+                android:layout_column="0"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="FirstName LastName"
+                android:paddingLeft="10dp"
+                android:layout_column="1"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:layout_column="0"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="UserName123"
+                android:paddingLeft="10dp"
+                android:layout_column="1"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:layout_column="0"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Chicago, IL"
+                android:paddingLeft="10dp"
+                android:layout_column="1"
+                android:textSize="20sp"/>
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preference:"
+                android:layout_column="0"
+                android:textSize="20sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Swap/Sell"
+                android:paddingLeft="10dp"
+                android:layout_column="1"
+                android:textSize="20sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:text="My Credit Card(s):"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/account_info_table"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:shrinkColumns="1"
+        android:id="@+id/cc_table"
+        android:layout_below="@+id/textView2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="35dp"
+                android:maxWidth="40dp"
+                android:maxHeight="35dp"
+                android:layout_column="0"
+                android:src="@drawable/visa_logo"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Visa Card"
+                android:paddingLeft="10dp"
+                android:layout_column="1"
+                android:textSize="20sp"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Info"
+        android:id="@+id/button"
+        android:layout_below="@+id/cc_table"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"/>
+
+
+</RelativeLayout>
+

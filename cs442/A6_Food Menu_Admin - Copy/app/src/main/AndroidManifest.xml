@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="sdutta9_a6.cs442.com.foodItem" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="sdutta9_a6.cs442.com.foodItem.FoodItemListActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="sdutta9_a6.cs442.com.foodItem.FoodItemDetailActivity"
+            android:label="@string/title_Food_detail"
+            android:parentActivityName="sdutta9_a6.cs442.com.foodItem.FoodItemListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="sdutta9_a6.cs442.com.foodItem.FoodItemListActivity" />
+        </activity>
+        <activity android:name=".FoodItemEdit" android:label="@string/app_name" />
+
+        <provider android:name=".ExampleProvider" android:exported="true"
+            android:readPermission="true" android:writePermission="true"
+            android:authorities="sdutta9_a6.cs442.com.foodItem" />
+    </application>
+
+</manifest>

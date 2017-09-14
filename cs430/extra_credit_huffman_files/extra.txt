@@ -1,0 +1,3 @@
+This sentence contains three a's, three c's, two d's, twenty-six e's, five f's, three g's, eight h's, thirteen i's, two l's, sixteen n's, nine o's, six r's, twenty-seven s's, twenty-two t's, two u's, five v's, eight w's, four x's, five y's, and only one z.
+
+This sentence contains six a's, five c's, three d's, twenty-six e's, five f's, three g's, eight h's, thirteen i's, three l's, two m's, sixteen n's, nine o's, eight r's, thirty-two s's, twenty-two t's, three u's, nine v's, eight w's, four x's, nine y's, only one z, twenty apostrophes, twenty-five commas, fifty-seven spaces, five hyphens, and only one period.
