@@ -1,0 +1,36 @@
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<!-- Ayesha Student, Mathematics Programmer! -->
+<head><title>counting techniques</title></head>
+<body style = "font-family:Tahoma; color:blue;">
+<h3 style = "test-align:center;"> Permutation Calculator</h3>
+<script type = "text/javascript">
+	//declare global var
+	var num = 0;
+	function Factorial (num) {
+		//start func def
+
+		//func var declare and assign
+		var fact = 1;
+		var index = 1;
+		//compute the factorial
+		for (index = 1; index <= num; index++) {
+			fact = fact * index;
+		}
+		//value to send to function calling statement
+		return fact;
+	} //end func def
+
+	//prompt user and receive data
+	var n = parseInt(prompt("enter a non-negative integer n"));
+	var r = parseInt(prompt("enter a non-negative integer r"));
+	//call the func and give result to local var
+	var numerator = Factorial (n);
+	var denominator = Factorial (n - r);
+	var permute = numerator / denominator;
+	//display result
+	document.write("<br>");
+	document.write("P(" + n + "," + r + ") = " + permut);
+	document.write("<br>");
+</script>
+</body>
+</html>

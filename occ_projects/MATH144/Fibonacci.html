@@ -1,0 +1,27 @@
+<html xmlns = "http://www.w3.0rg/1999/xhtml">
+<head>
+<title>Fibonacci Stuff</title>
+<style type = "text/css">
+body { padding-left: 100px; padding-right: 100px; }
+body { font-family:Tahoma; }
+</style>
+<script type = "text/javascript">
+//Fibby code starts here
+var index, fibon, fibold = 1, fibnew = 1;
+var n = prompt("how many Fibonacci numbers? (n>2)", "");
+document.write("<br>" + fibold + "<br>");
+document.write("<br>" + fibnew + "<br>");
+for (index = 3; index <= n; index++) {
+	fibon = fibold + fibnew;
+	document.write("<br>" + fibon + "<br>");
+	fibold = fibnew;
+	fibnew = fibon;
+}
+</script>
+</head>
+<body>
+<!-- Ayesha's: HTML Fibonacci Project -->
+<h3>The Fibonacci Numbers</h3>
+<br>
+</body>
+</html>
