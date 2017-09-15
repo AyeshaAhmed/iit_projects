@@ -1,0 +1,142 @@
+Generated File. Do not edit.
+
+[HEADER]
+Version|0.08|$
+
+[PLUGINS]
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\AIR\nppdf32.dll|$
+|$
+1503012154000|1|1|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.22|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$
+C:\Program Files (x86)\Common Files\Wolfram Research\Browser\10.0.2.5203600\npmathplugin.dll|$
+|$
+1417578268000|1|1|$
+Enables interaction with CDF content.|$
+Wolfram Mathematica|$
+5
+0|application/vnd.wolfram.cdf|Computable Document Format|cdf|$
+1|application/vnd.wolfram.cdf.text|Computable Document Format|cdf|$
+2|application/vnd.wolfram.mathematica|Wolfram Notebook|nb|$
+3|application/vnd.wolfram.player|Wolfram CDF Player Notebook|nbp|$
+4|application/mathematica|Wolfram Notebook|nb,nbp|$
+C:\Program Files (x86)\Google\Update\1.3.33.5\npGoogleUpdate3.dll|$
+|$
+1493388355230|1|1|$
+Google Update|$
+Google Update|$
+2
+0|application/x-vnd.google.update3webcontrol.3|||$
+1|application/x-vnd.google.oneclickctrl.9|||$
+C:\Program Files (x86)\Microsoft Office\root\Office16\NPSPWRAP.DLL|$
+|$
+1500686529507|1|1|$
+The plugin allows you to have a better experience with Microsoft SharePoint|$
+Microsoft Office 2016|$
+2
+0|application/x-sharepoint|SharePoint Plug-in for Firefox||$
+1|application/x-sharepoint-uc|||$
+C:\Program Files (x86)\Microsoft Office\root\VFS\ProgramFilesX86\Mozilla Firefox\plugins\npMeetingJoinPluginOC.dll|$
+|$
+1500686599599|1|1|$
+The plugin allows you to have a better experience with Microsoft Lync|$
+Microsoft Office 2016|$
+1
+0|application/vnd.microsoft.communicator.ocsmeeting|Lync Plug-in for Firefox||$
+C:\Program Files (x86)\Java\jre1.8.0_101\bin\plugin2\npjp2.dll|$
+|$
+1472717116855|1|1|$
+Next Generation Java Plug-in 11.101.2 for Mozilla browsers|$
+Java(TM) Platform SE 8 U101|$
+40
+0|application/x-java-applet|Java Applet||$
+1|application/x-java-bean|JavaBeans||$
+2|application/x-java-vm|||$
+3|application/x-java-applet;version=1.1.1|||$
+4|application/x-java-bean;version=1.1.1|||$
+5|application/x-java-applet;version=1.1|||$
+6|application/x-java-bean;version=1.1|||$
+7|application/x-java-applet;version=1.2|||$
+8|application/x-java-bean;version=1.2|||$
+9|application/x-java-applet;version=1.1.3|||$
+10|application/x-java-bean;version=1.1.3|||$
+11|application/x-java-applet;version=1.1.2|||$
+12|application/x-java-bean;version=1.1.2|||$
+13|application/x-java-applet;version=1.3|||$
+14|application/x-java-bean;version=1.3|||$
+15|application/x-java-applet;version=1.2.2|||$
+16|application/x-java-bean;version=1.2.2|||$
+17|application/x-java-applet;version=1.2.1|||$
+18|application/x-java-bean;version=1.2.1|||$
+19|application/x-java-applet;version=1.3.1|||$
+20|application/x-java-bean;version=1.3.1|||$
+21|application/x-java-applet;version=1.4|||$
+22|application/x-java-bean;version=1.4|||$
+23|application/x-java-applet;version=1.4.1|||$
+24|application/x-java-bean;version=1.4.1|||$
+25|application/x-java-applet;version=1.4.2|||$
+26|application/x-java-bean;version=1.4.2|||$
+27|application/x-java-applet;version=1.5|||$
+28|application/x-java-bean;version=1.5|||$
+29|application/x-java-applet;version=1.6|||$
+30|application/x-java-bean;version=1.6|||$
+31|application/x-java-applet;version=1.7|||$
+32|application/x-java-bean;version=1.7|||$
+33|application/x-java-applet;version=1.8|||$
+34|application/x-java-bean;version=1.8|||$
+35|application/x-java-applet;jpi-version=1.8.0_101|||$
+36|application/x-java-bean;jpi-version=1.8.0_101|||$
+37|application/x-java-vm-npruntime|||$
+38|application/x-java-applet;deploy=11.101.2|||$
+39|application/x-java-applet;javafx=8.0.101|||$
+C:\Program Files (x86)\Java\jre1.8.0_101\bin\dtplugin\npdeployJava1.dll|$
+|$
+1472717116432|1|1|$
+NPRuntime Script Plug-in Library for Java(TM) Deploy|$
+Java Deployment Toolkit 8.0.1010.13|$
+1
+0|application/java-deployment-toolkit|||$
+C:\Program Files (x86)\Canon\My Image Garden\AddOn\CIG\npmigfpi.dll|$
+|$
+1322683138000|1|1|$
+CANON iMAGE GATEWAY Album Plugin Utility Module for IJ|$
+CANON iMAGE GATEWAY Album Plugin Utility for IJ|$
+1
+0|application/x-eppex-plugin-1|npmigfpi.dll||$
+C:\WINDOWS\SysWOW64\Macromed\Flash\NPSWF32_27_0_0_130.dll|$
+|$
+1505230644963|1|1|$
+Shockwave Flash 27.0 r0|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+C:\Program Files (x86)\LEGO Software\LEGO MINDSTORMS Edu NXT\plugins\NPSWF32.dll|$
+|$
+1163103640000|1|1|$
+Shockwave Flash 9.0  r28|$
+Shockwave Flash|$
+2
+0|application/x-shockwave-flash|Adobe Flash movie|swf|$
+1|application/futuresplash|FutureSplash movie|spl|$
+C:\Program Files (x86)\Adobe\Reader 11.0\Reader\browser\nppdf32.dll|$
+|$
+1503012154000|1|9|$
+Adobe PDF Plug-In For Firefox and Netscape 11.0.22|$
+Adobe Acrobat|$
+7
+0|application/pdf|Acrobat Portable Document Format|pdf|$
+1|application/vnd.adobe.pdfxml|Adobe PDF in XML Format|pdfxml|$
+2|application/vnd.adobe.x-mars|Adobe PDF in XML Format|mars|$
+3|application/vnd.fdf|Acrobat Forms Data Format|fdf|$
+4|application/vnd.adobe.xfdf|XML Version of Acrobat Forms Data Format|xfdf|$
+5|application/vnd.adobe.xdp+xml| Acrobat XML Data Package|xdp|$
+6|application/vnd.adobe.xfd+xml|Adobe FormFlow99 Data File|xfd|$

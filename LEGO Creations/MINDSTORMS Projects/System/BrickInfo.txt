@@ -1,0 +1,4 @@
+[LEGO MINDSTORMS NXT]
+FWMajor=0
+FWMinor=0
+AvailMemory=0
