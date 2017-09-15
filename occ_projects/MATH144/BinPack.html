@@ -1,0 +1,35 @@
+<html xmlns = "http://www.w3.org/1999/xhtml">
+<!-- Modulus Operation Example -->
+<head><title>Welcome</title></head>
+<body style = "background-color:#CCFFFF;font-family:Tahoma">
+<h3>Sedgwick Specialty Services</h3>
+<script type = "text/javascript">
+//Code starts here
+var g_size = 50, l_size = 20, m_size = 5, s_size = 1;
+var items = 0, giant = 0, large = 0, medium = 0, small = 0;
+var temp = 0, response = "Y";
+//Greeting
+document.writeln("Welcome!");
+//Loop
+while (response == "Y" || response == "y"){
+	items = parseInt(prompt("How many items to pack?"));
+	document.writeln("Items to pack: " + items);
+	giant = parseInt(items/g_size);
+	document.writeln("Giant containers: " + giant);
+	temp = items%g_size;
+	items = temp;
+	large = parseInt(items/l_size);
+	document.writeln("Large containers: " + large);
+	temp = items%l_size;
+	items = temp;
+	medium = parseInt(items/m_size);
+	document.writeln("Medium containers: " + medium);
+	temp = items%m_size;
+	small = temp;
+	document.writeln("Small containers: " + small);
+	response = prompt("Enter another order? (type Y or N): ");
+	}
+document.writeln("Have a nice day! ;)");
+</script>
+</body>
+</html>
