@@ -1,0 +1,81 @@
+-- ------------------------------
+-- Type Declarations
+-- ------------------------------
+
+data Stmt = ExpStmt Exp
+     	  | SetStmt String Exp
+     deriving(Show,Read)
+
+data Exp = IntExp Int
+     	 | VarExp String
+	 | OpExp String Exp Exp
+	 | LamExp String Exp
+	 | AppExp Exp Exp
+     deriving(Show,Read)
+
+data Val = IntVal Int
+     	 | CloVal String Exp Env
+     deriving(Show,Read)
+
+type Env = [ (String, Val) ]
+
+data State = State String Env
+
+-- ------------------------------
+-- Operators
+-- ------------------------------
+
+lift op v1 v2 = 
+  let IntVal i1 = v1
+      IntVal i2 = v2
+  in IntVal (op i1 i2)
+
+intOpList = [ ("+", (+)) ]
+
+-- ------------------------------
+-- Eval
+-- ------------------------------
+
+eval (IntExp i) env = IntVal i
+eval (ValExp s) env = 
+  case lookup s env of
+    Just v -> v
+    Nothing -> IntVal 0
+eval (LamExp s body) env = CloVal s body env
+eval (OpExp o e1 e2) env = 
+  let v1 = eval e1 env
+      v2 = eval e2 env
+      op = lookup o intOpList
+  in case op of
+    Just op' -> lift op' v1 v2
+    Nothing -> error "Operator not found."
+eval (AppExp e1 e2) env = 
+  let v1 = eval e1 env
+      v2 = eval e2 env
+  in case v1 of
+    CloVal s b env' -> eval b ((s,v2) : env')
+    _	       	    -> error "Not a function."
+
+-- --------------------------------
+-- Exec
+-- --------------------------------
+
+exec (SetStmt s exp) env = 
+    State (s ++ " set.") ((s.eval exp env):env)
+exec (ExpStmt exp) env = 
+    State (show result) env
+  where result = eval exp env
+
+-- --------------------------------
+-- REPL
+-- --------------------------------
+
+repl env = do
+  putStr "> "
+  str <- getLine
+  let State result nuenv - exec (read str) env
+  putStrLn result
+  putStrLn ""
+  repl nuenv
+
+main = repl [ ("x",IntVal 1) ]

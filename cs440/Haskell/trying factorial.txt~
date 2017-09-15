@@ -1,0 +1,36 @@
+> 4 begin dup .S dup 1 > if rot swap 1 - else exit then again
+4 4 
+4 3 3 
+3 4 2 2 
+2 2 3 3 3 
+3 3 3 2 1 1 
+
+
+> 4 begin dup .S dup 1 > if swap rot 1 - else exit then again
+4 4 
+4 3 3 
+3 3 3 3 
+3 3 3 2 2 
+2 2 3 3 2 2 
+2 2 3 3 2 1 1 
+
+
+4 begin dup .S dup 1 > if swap rot * 1 - else exit then again
+not work
+
+4 begin dup .S dup 1 > if swap * rot 1 - else exit then again
+not work
+
+4 begin dup .S dup 1 > if swap rot 1 - * else exit then again
+not work
+
+4 begin dup .S dup 1 > if * swap rot 1 - else exit then again
+not work
+
+4 begin dup . dup 1 > if swap (rot *) 1 - else exit then again
+not work
+
+4 begin dup . dup 1 > if rot * 1 - else exit then again
+
+
+http://bit.ly/1WIEdqY

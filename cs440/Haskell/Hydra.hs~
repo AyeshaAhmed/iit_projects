@@ -1,0 +1,19 @@
+maxlevel hydra = aux hydra (length hydra)
+  where aux _      0 = 0
+        aux []     _ = 0
+        aux (0:xs) i = aux xs (i-1)
+        aux (x:xs) i = i
+
+-- chop []	      acc = acc
+-- chop (x:y:ys) acc = chop ((x * (maxlevel (x : ys))) : ys) (x + acc)
+
+
+chop head_count = pos head_count [0]
+     where pos []     	    arr = arr
+     	   pos (0:y:ys)	    arr = (y:ys)
+    	   pos (x:y:ys)     arr = ((x-1):(y+(maxlevel(head_count)-1)):ys)
+
+chopAll heads = num heads 0
+     where num []	 acc = acc
+     	   num (0:xs)	 acc = num xs acc
+     	   num (x:xs)	 acc = num (chop(x:xs)) (acc+1)

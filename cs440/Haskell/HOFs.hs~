@@ -1,0 +1,2 @@
+negList [] = []
+negList map(/x -> -1 * x)

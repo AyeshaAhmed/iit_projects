@@ -1,0 +1,21 @@
+
+
+
+
+data Counter a = Counter a Int
+	deriving (Show, Eq)
+
+instance Monad Counter where
+	return x = Counter x 0
+	(>>=) (Counter a i) f = 
+		let Counter b j = f a in
+		    Counter b (j + i + 1)
+
+inc x = x >>= (\a -> return $ a + 1)
+
+add x y = do
+	a <- x
+	b <- y
+	return $ a +b
+
+
