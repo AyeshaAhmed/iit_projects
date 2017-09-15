@@ -1,7 +1,7 @@
 # iit_projects
 This repo contains coding projects I did in university.
-          
-          To download only one folder from this repo use this method: https://stackoverflow.com/questions/7106012/download-a-single-folder-or-directory-from-a-github-repo
+
+To download only one folder from this repo use this method: https://stackoverflow.com/questions/7106012/download-a-single-folder-or-directory-from-a-github-repo
           
 I understand this is a very loaded repo. So for convenience, 
 I have listed links to some interesting projects I did here in the README.
